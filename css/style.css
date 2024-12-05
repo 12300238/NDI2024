@@ -69,6 +69,10 @@ h1{
     bottom: -70px;
 }
 
+.nav-item a {
+    color: #fff;
+}
+
 @keyframes bubble{
     0%{
         transform: translateY(0);
