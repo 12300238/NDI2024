@@ -12,10 +12,10 @@ body {
 
 @font-face {
     font-family: NexaHeavy;
-    src: url(font/Nexa-Heavy.ttf);
+    src: url(../font/Nexa-Heavy.ttf);
 }
 
 @font-face {
     font-family: NexaLight;
-    src: url(font/Nexa-ExtraLight.ttf);
+    src: url(../font/Nexa-ExtraLight.ttf);
 }
