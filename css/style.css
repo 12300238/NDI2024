@@ -216,3 +216,22 @@ h1{
 .avofoot{
     margin-bottom: 257px;
 }
+.text{
+    background-color: white;
+    color: black;
+    border-radius: 1em;
+    border: solid 2px black;
+    padding: 6px;
+    margin: 3px;
+    opacity: 0.5;
+}
+
+.text p{
+    opacity: 1;
+    font-weight: 800;
+}
+
+.text h2{
+    opacity: 1;
+    font-weight: 950;
+}
