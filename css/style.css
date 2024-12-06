@@ -7,7 +7,11 @@
 }
 
 body {
-    background-color: darkblue;
+    background-color: #005060;
+    background-image: url(../img/background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 @font-face {
@@ -23,9 +27,6 @@ body {
 .home{
     width: 100%;
     height: 100vh;
-    background-image: url(../img/background.png);
-    background-size: cover;
-    background-position: center;
     position: relative;
     overflow: hidden;
 }
@@ -133,9 +134,7 @@ h1{
 .details{
     width: 100%;
     height: 100vh;
-    background-image: url(../img/background_bis.png);
-    background-size: cover;
-    background-position: center;
     position: relative;
     overflow: hidden;
+    color: #fbfcfd
 }
