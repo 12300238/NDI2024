@@ -30,14 +30,6 @@
             height: 100%;
             }
         }
-        .chart-section {
-            flex: 1;
-            display: inline;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-        }
         #foo {
             width: 100%;
             bottom :0 ;
