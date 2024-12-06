@@ -43,7 +43,7 @@
     list-style: none !important;
 }
 
-body {
+#indexBody {
     background-color: #005060;
     background-image: url(../img/background.jpeg);
     background-repeat: no-repeat;
