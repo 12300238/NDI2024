@@ -191,6 +191,7 @@
                 <h3>OMAR ID EL MOUNEN</h3>
                 <p>Chef d'équipe</p>
                 <p id="hidden" hidden = "true">Omar est notre chef d'équipe dynamique et motivé, actuellement en troisième année de BUT Informatique. Il s'investit pleinement dans ses responsabilités, notamment en prenant en charge l'index de notre site web. Grâce à ses compétences et à son souci du détail, il a également amélioré significativement l'accessibilité de notre projet, rendant notre site plus inclusif et performant. Un véritable leader qui inspire confiance et donne le meilleur de lui-même pour atteindre nos objectifs communs.</p>
+                <p><img src="Graphique_Omar.png" alt="graph"></p>
             </div>
             <div class="team-member">
                 <img src="Teo.jpg" alt="Photo du membre">
@@ -198,12 +199,14 @@
                 <p>Directeur de projet</p>
                 <p>Développeur</p>
                 <p id="hidden" hidden = "true">Téo est notre directeur de projet, un leader calme mais redoutablement efficace. Étudiant en deuxième année de BUT Informatique, il allie organisation et compétences techniques remarquables. En plus de sa gestion du projet, Téo brille en tant que développeur chevronné, prenant seul en charge la conception et le développement de la page body de notre site web, une tâche particulièrement complexe. Sa productivité et son sang-froid en font un atout essentiel pour notre équipe.</p>
+                <p><img src="Graphique_Teo.png" alt="graph"></p>
             </div>
             <div class="team-member">
                 <img src="Mathew.jpg" alt="Photo du membre">
                 <h3>MATHEW PRADES</h3>
                 <p>Développeur</p>
                 <p id="hidden" hidden = "true">Mathew est un développeur talentueux et enjoué, actuellement en deuxième année de BUT Informatique. D’un naturel calme et toujours de bonne humeur, il contribue à une ambiance positive au sein de l’équipe. Aux côtés de ses camarades, il travaille sur la page index du site, apportant sa rigueur et son esprit collaboratif pour garantir un résultat de qualité. Un membre essentiel à la cohésion et à la réussite de notre projet.</p>
+                <p><img src="Graphique_Mathew.png" alt="graph"></p>
             </div>
             <div class="team-member">
                 <img src="Moi-meme.jpg" alt="Photo du membre">
@@ -263,6 +266,7 @@
         <h3></h3>
         <p></p>
         <p id="resultat"></p>
+        <p id="graph"></p>
     </div>
 
     <script>
@@ -282,7 +286,7 @@
                     const name = h3.textContent;
                     let i = 0;
                     hoverInfo.querySelector('p').textContent = '';
-                    while(i < p.length - 2){
+                    while(i < p.length - 3){
                         const role = p[i].textContent;
                         hoverInfo.querySelector('p').textContent += role+', ';
                         i++;
@@ -292,10 +296,13 @@
                     i++;
                     const resultat = p[i].textContent;
                     const resultat_finale = resultat;
+                    i++;
+                    const resultat_graph = p[i].;
 
                     hoverInfo.querySelector('img').src = imgSrc;
                     hoverInfo.querySelector('h3').textContent = name;
                     hoverInfo.querySelector('#resultat').textContent = resultat_finale;
+                    hoverInfo.querySelector('#graph').textContent = resultat_graph;
 
                     hoverInfo.style.display = 'flex';
                 }
