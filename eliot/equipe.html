@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation de l'équipe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        main {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        h1{
+            text-align: center;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .text-section {
+            flex: 1;
+            margin-right: 20px;
+            text-align: justify;
+        }
+        .text-section h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .text-section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .chart-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        canvas {
+            max-width: 100%;
+            height: auto;
+        }
+        .team-container {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            align-content: start;
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .team-member {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            width: 200px; /* Largeur identique pour chaque membre */
+            height: 250px; /* Hauteur identique pour chaque membre */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translate(5px, -5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        .team-member img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .team-member h3 {
+            margin: 10px 0 5px;
+            font-size: 1em;
+        }
+        .team-member p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .team-container:last-child {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .hover-info {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            z-index: 1000;
+        }
+        .hover-info img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .hover-info h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        .hover-info p {
+            font-size: 1.2em;
+        }
+        .close{
+            margin-bottom: 2px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Statistiques et Équipe</h1>
+        <p>Découvrez notre équipe et nos performances</p>
+    </header>
+    <main>
+        <section class="content">
+            <div class="text-section">
+                <h2>À propos de notre équipe</h2>
+                <p>
+                    Notre équipe est composée de 11 membres talentueux, chacun apportant ses compétences uniques 
+                    pour relever les défis. Nous travaillons ensemble pour atteindre nos objectifs et fournir 
+                    des solutions innovantes dans divers domaines comme le développement web, le design et la gestion de projets.
+                </p>
+                <p>
+                    Le graphique à droite présente une répartition de nos compétences principales, mettant en avant 
+                    nos forces en développement, design et gestion. Cela reflète notre polyvalence et notre engagement.
+                </p>
+            </div>
+            <div class="chart-section">
+                <canvas id="teamChart"></canvas>
+            </div>
+        </section>
+        </br>
+        </br>
+        </br>
+        <h1>L'équipe</h1>
+        </br>
+        </br>
+        <section class="team-container">
+            <!-- Membres de l'équipe -->
+            <div class="team-member">
+                <img src="Omar.jpg" alt="Photo du membre">
+                <h3>OMAR ID EL MOUNEN</h3>
+                <p>Chef d'équipe</p>
+                <p id="hidden" hidden = "true"> test</p>
+            </div>
+            <div class="team-member">
+                <img src="Teo.jpg" alt="Photo du membre">
+                <h3>TEO LEMESLE</h3>
+                <p>Directeur de projet</p>
+                <p>Développeur</p>
+                <p id="hidden" hidden = "true"> test</p>
+            </div>
+            <div class="team-member">
+                <img src="Mathew.jpg" alt="Photo du membre">
+                <h3>MATHEW PRADES</h3>
+                <p>Développeur</p>
+                <p id="hidden" hidden = "true"> test</p>
+            </div>
+            <div class="team-member">
+                <img src="Moi-meme.jpg" alt="Photo du membre">
+                <h3>ELLIOT BIERNAT</h3>
+                <p>Développeur</p>
+                <p id="hidden" hidden = "true"> test</p>
+            </div>
+            <div class="team-member">
+                <img src="Enrike.jpg" alt="Photo du membre">
+                <h3>ENRIKE CHAMPION</h3>
+                <p>Développeur</p>
+                <p id="hidden" hidden = "true"> test</p>
+            </div>
+            <div class="team-member">
+                <img src="Gabrielle.jpg" alt="Photo du membre">
+                <h3>GABRIELLE DE BAETS</h3>
+                <p>Stagiaire</p>
+                <p id="hidden" hidden = "true"> test</p>
+            </div>
+            <div class="team-member">
+                <img src="Mohamed_1.jpg" alt="Photo du membre">
+                <h3>MOHAMED BOUGHRARAS</h3>
+                <p>Web designer</p>
+                <p id="hidden" hidden = "true"> test</p>
+            </div>
+            <div class="team-member">
+                <img src="Mohamed_2.jpg" alt="Photo du membre">
+                <h3>MOHAMED RAHMANI</h3>
+                <p>Directeur défi Captcha</p>
+                <p>Développeur</p>
+                <p id="hidden" hidden = "true"> test</p>
+            </div>
+            <div class="team-member">
+                <img src="Romain.jpg" alt="Photo du membre">
+                <h3>ROMAIN AGNER</h3>
+                <p>Développeur</p>
+                <p id="hidden" hidden = "true"> test</p>
+            </div>
+            <div class="team-member">
+                <img src="Viturzen.jpg" alt="Photo du membre">
+                <h3>VITHURZEN VILVARAJAHS</h3>
+                <p>Développeur</p>
+                <p id="hidden" hidden = "true"> test</p>
+            </div>
+            <div class="team-member">
+                <img src="Leo_joyaux.jpg" alt="Photo du membre">
+                <h3>LEO BERQUET</h3>
+                <p>Directeur défi Ubisoft</p>
+                <p id="hidden" hidden = "true"> test</p>
+            </div>
+        </section>
+
+    </main>
+    <div id="hover-info" class="hover-info">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <img src="" alt="Photo du membre">
+        <h3></h3>
+        <p></p>
+        <p id="resultat"></p>
+    </div>
+
+    <script>
+        const hoverInfo = document.getElementById('hover-info');
+        const allDivs = document.querySelectorAll('.team-member');
+        const Close = hoverInfo.querySelector('button');
+
+        allDivs.forEach(div => {
+            div.addEventListener('click', (info) => {
+                const img = div.querySelector('img');
+                const h3 = div.querySelector('h3');
+                const p = div.querySelectorAll('p');
+
+                if (img && h3 && p) {
+                    console.log(p);
+                    const imgSrc = img.src;
+                    const name = h3.textContent;
+                    let i = 0;
+                    hoverInfo.querySelector('p').textContent = '';
+                    while(i < p.length - 2){
+                        const role = p[i].textContent;
+                        hoverInfo.querySelector('p').textContent += role+', ';
+                        i++;
+                    }
+                    const role = p[i].textContent;
+                    hoverInfo.querySelector('p').textContent += role;
+                    i++;
+                    const resultat = p[i].textContent;
+                    const resultat_finale = resultat;
+
+                    hoverInfo.querySelector('img').src = imgSrc;
+                    hoverInfo.querySelector('h3').textContent = name;
+                    hoverInfo.querySelector('#resultat').textContent = resultat_finale;
+
+                    hoverInfo.style.display = 'flex';
+                }
+            });
+
+            Close.addEventListener('click', () => {
+                hoverInfo.style.display = 'none';
+            });
+        });
+    </script>
+    <script>
+        // Configuration du graphique
+        const ctx = document.getElementById('teamChart').getContext('2d');
+        const teamChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Développement', 'Design', 'Gestion de projet', 'Support', 'Autres'],
+                datasets: [{
+                    label: 'Compétences de l\'équipe',
+                    data: [50, 15, 20, 10, 5],
+                    backgroundColor: ['#4CAF50', '#FF9800', '#2196F3', '#9C27B0', '#FFC107'],
+                    borderColor: '#fff',
+                    borderWidth: 2,
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: {
+                                size: 14
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
