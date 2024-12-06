@@ -237,3 +237,9 @@ h1{
     opacity: 1;
     font-weight: 950;
 }
+
+#logo{
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}   
