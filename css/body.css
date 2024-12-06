@@ -5,7 +5,7 @@ body {
 .bodypage {
     position: relative;
     height: 50rem;
-    margin: auto;
+    margin-left: 40%;
     background-color: transparent;
 }
 
@@ -14,28 +14,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-    margin: auto;
     background-color: transparent;
 }
 
 .button {
-    position: absolute;
-    /* Position relative to the parent container */
-    border-radius: 50%;
-    /* Make it circular */
+    position: relative;
+    border-radius: 50px;
     width: 50px;
     /* Fixed size */
     height: 50px;
     /* Fixed size */
     background-color: rgba(0, 0, 0, 0.4);
-    font-size: 24px;
-    /* Fixed font size */
-    color: white;
-    /* Button text color */
-    display: flex;
-    /* Center the text */
-    justify-content: center;
-    /* Center horizontally */
-    align-items: center;
-    /* Center vertically */
+    font-size: 20px;
+    z-index: 1030;
 }
