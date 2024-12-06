@@ -18,6 +18,9 @@ require_once "navbar.html";
 
         <a href="/body.php"><button>Explorer</button></a>
         <a href="#text"><button>Détails</button></a>
+        <div class="col mb-3">
+    <audio controls autoplay="true" src="audio/Podcast_nuit_de_linfo.mp3"></audio>
+  </div>
     </div>
 </div>
 <div id = "text" class="details container avofoot">
