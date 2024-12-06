@@ -297,12 +297,12 @@
                     const resultat = p[i].textContent;
                     const resultat_finale = resultat;
                     i++;
-                    const resultat_graph = p[i].;
+                    const resultat_graph = p[i].children;
 
                     hoverInfo.querySelector('img').src = imgSrc;
                     hoverInfo.querySelector('h3').textContent = name;
                     hoverInfo.querySelector('#resultat').textContent = resultat_finale;
-                    hoverInfo.querySelector('#graph').textContent = resultat_graph;
+                    hoverInfo.querySelector('#graph').append(resultat_graph[0]);
 
                     hoverInfo.style.display = 'flex';
                 }
