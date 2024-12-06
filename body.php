@@ -2,6 +2,12 @@
     require_once 'header.html';
 ?>
 
+<body id="bodyBody">
+
+<?php
+    require_once 'navbar.html';
+?>
+
 <div class="bodypage">
     <img class="body" src="images/body-image.png" alt="Corps humain">
 

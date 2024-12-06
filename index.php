@@ -2,6 +2,12 @@
 require_once "header.html";
 ?>
 
+<body id="indexBody">
+
+<?php
+require_once "navbar.html";
+?>
+
 <div class="home">
     <div class="content container">
         <h1>Les océans :<br>Des écosystèmes<br>en danger</h1>
