@@ -30,6 +30,14 @@ body {
     overflow: hidden;
 }
 
+.navbar{
+    transition: all 0.5s;
+}
+
+.navbar-scrolled{
+    background-color: #000;
+}
+
 .content{
     color: #fbfcfd;
     position: absolute;
