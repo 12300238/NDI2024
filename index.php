@@ -3,7 +3,7 @@ require_once "header.html";
 ?>
 
 <div class="home">
-    <div class="content">
+    <div class="content container">
         <h1>Les océans :<br>Des écosystèmes<br>en danger</h1>
 
         <p>Les océans, qui couvrent plus de 70 % de la surface de la Terre,
@@ -23,7 +23,7 @@ require_once "header.html";
         <img src="img/bubble.png">
     </div>
 </div>
-<div class="details">
+<div class="details container avofoot">
     <h2>Pollution :</h2>
     <p>Les océans sont gravement affectés par la pollution plastique, avec des millions de tonnes de déchets formant des "continents" flottants.
     Les produits chimiques toxiques issus de l’agriculture et de l’industrie, ainsi que les eaux usées, contaminent les écosystèmes marins et
