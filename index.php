@@ -13,15 +13,6 @@ require_once "header.html";
         <a href="/body.php"><button>Explorer</button></a>
         <a href="#text"><button>Détails</button></a>
     </div>
-    <div class="bubbles">
-        <img src="img/bubble.png">
-        <img src="img/bubble.png">
-        <img src="img/bubble.png">
-        <img src="img/bubble.png">
-        <img src="img/bubble.png">
-        <img src="img/bubble.png">
-        <img src="img/bubble.png">
-    </div>
 </div>
 <div id = "text" class="details container avofoot">
     <div id="text" style = "margin: 56px 0px;"></div>
@@ -60,7 +51,15 @@ require_once "header.html";
         environnement.</p>
     </div>
 </div>
-
+<div class="bubbles">
+    <img src="img/bubble.png">
+    <img src="img/bubble.png">
+    <img src="img/bubble.png">
+    <img src="img/bubble.png">
+    <img src="img/bubble.png">
+    <img src="img/bubble.png">
+    <img src="img/bubble.png">
+</div>
 <?php
 require_once "footer.html";
 ?>
