@@ -10,10 +10,11 @@
     <div id="headModal" class="modal" style="z-index:1040" role="dialog">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Le cerveau -&gt; Les récifs coralliens</h4>
+                    <button style="color:black; font-size: 30px" type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
                 <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal">×</button>
-                    <h4>Le cerveau -&gt; Les récifs coraliens</h4>
-                    
                     <p>Le cerveau est le centre de contrôle du corps, gérant les fonctions vitales et coordonnant les activités. Dans l’océan, les récifs coralliens jouent un rôle similaire : ils régulent et soutiennent la vie marine en abritant une biodiversité incroyable, servant de point de connexion pour des milliers d'espèces.</p>
                 </div>
             </div>
@@ -26,8 +27,7 @@
     <div id="heartModal" class="modal" style="z-index:1040" role="dialog">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal">×</button>
+                <div class="modal-header">
                     <h4>Le cœur → Les courants océaniques</h4>
                     <button style="color:black; font-size: 30px" type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
@@ -44,8 +44,7 @@
     <div id="lungsModal" class="modal" style="z-index:1040" role="dialog">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal">×</button>
+                <div class="modal-header">
                     <h4>Les poumons → Les algues et le phytoplancton</h4>
                     <button style="color:black; font-size: 30px" type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
@@ -62,7 +61,7 @@
     <div id="digestModal" class="modal" style="z-index:1040" role="dialog">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
-                <div class="modal-body">
+                <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">×</button>
                     <h4>Le système digestif → Les fosses océaniques et sédiments</h4>
                     <button style="color:black; font-size: 30px" type="button" class="close" data-dismiss="modal">&times;</button>
@@ -80,7 +79,7 @@
     <div id="bonesModal" class="modal" style="z-index:1040" role="dialog">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
-                <div class="modal-body">
+                <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">×</button>
                     <h4>Les os → Les dorsales océaniques</h4>
                     <button style="color:black; font-size: 30px" type="button" class="close" data-dismiss="modal">&times;</button>
@@ -98,8 +97,7 @@
     <div id="veinsModal" class="modal" style="z-index:1040" role="dialog">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal">×</button>
+                <div class="modal-header">
                     <h4>Le système circulatoire → Les réseaux hydrothermaux</h4>
                     <button style="color:black; font-size: 30px" type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
@@ -116,9 +114,8 @@
     <div id="skinModal" class="modal" style="z-index:1040" role="dialog">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal">×</button>
-                    <h4>La peau → La surface de l'océan</h4>
+                <div class="modal-header">
+                     <h4>La peau → La surface de l'océan</h4>
                     <button style="color:black; font-size: 30px" type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
