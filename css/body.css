@@ -1,4 +1,9 @@
+body {
+    background-image: url(../images/background-body.jpeg);
+}
+
 .bodypage {
+    position: relative;
     height: 50rem;
     margin: auto;
     background-color: transparent;
@@ -15,11 +20,22 @@
 
 .button {
     position: absolute;
-    border-radius: 50px;
+    /* Position relative to the parent container */
+    border-radius: 50%;
+    /* Make it circular */
     width: 50px;
+    /* Fixed size */
     height: 50px;
-    padding: 0;
-    margin: 0;
+    /* Fixed size */
     background-color: rgba(0, 0, 0, 0.4);
-    font-size: 20px;
+    font-size: 24px;
+    /* Fixed font size */
+    color: white;
+    /* Button text color */
+    display: flex;
+    /* Center the text */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
 }
