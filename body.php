@@ -8,7 +8,7 @@
     require_once 'navbar.html';
 ?>
 
-<div class="bodypage">
+<span class="center"><div class="bodypage">
     <img class="body" src="images/body-image.png" alt="Corps humain">
 
     <button type="button" class="button btn-md" style="top: -650px; left: 230px" data-toggle="modal" data-target="#headModal">+</button>
@@ -130,7 +130,7 @@
             </div>
         </div>
     </div>
-</div>
+</div></span>
 
 <?php
     require_once 'footer.html';
