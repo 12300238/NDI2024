@@ -6,8 +6,13 @@
     position: relative;
     height: 50rem;
     background-color: transparent;
-    overflow-y: scroll;
 }
+
+@media screen and (max-width :460px){
+    .bodypage{
+        overflow-y: scroll;
+    }
+  }
 
 .center{
     display: flex;
